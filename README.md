@@ -18,3 +18,34 @@ npm i mongoose
 npm i dotnenv
 node index.js
 ```
+## Folder Stucture
+```sh
+├── config
+│   ├── mongoose.js
+│
+├── controllers
+│   ├──home_controller.js
+│   ├──options_controller.js
+│   └──questions_controller.js
+│
+├── models
+│   ├──option.js
+│   └──question.js
+│
+├── routes
+│   ├──api
+│      ├──v1
+│          └── index.js
+|      └── index.js
+│   └── index.js
+│
+├── views
+│   ├── _home.ejs
+│   └── layout.ejs
+│
+├── index.js
+├── .gitignore
+├── package.json
+└── README.md
+
+```
