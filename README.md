@@ -49,7 +49,7 @@ node index.js
 └── README.md
 
 ```
-```sf
+```sh
 ### Link
 - #### https://polling-system-api-h92m.onrender.com
 ```
