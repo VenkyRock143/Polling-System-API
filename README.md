@@ -34,9 +34,9 @@ node index.js
 │
 ├── routes
 │   ├──api
-│      ├──v1
-│          └── index.js
-|      └── index.js
+│   |  ├──v1
+│   |  |   └── index.js
+|   |  └── index.js
 │   └── index.js
 │
 ├── views
