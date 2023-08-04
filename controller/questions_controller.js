@@ -29,7 +29,7 @@ module.exports.addOptions = async (req, res) => {
         };
         const option = await Option.create(newOption);
 
-        option.link_to_vote = `http://localhost:4000/api/v1/options/${option._id}/addVote`;
+        option.link_to_vote = `https://polling-system-api-h92m.onrender.com/api/v1/options/${option._id}/addVote`;
         await option.save();
 
         question.options.push(option);
