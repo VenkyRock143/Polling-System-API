@@ -49,3 +49,22 @@ node index.js
 └── README.md
 
 ```
+POSTMAN
+ - ### In this app only API as been designed please open the POSTMAN and do below actions to run the API
+ - #### This are question routes
+- ##### To create a question
+- http://localhost:4000/api/v1/create
+- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the question for title and id
+- ##### To add a option to question
+- http://localhost:4000/api/v1/:id/options/create
+- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the option for text
+- ##### To delete a question
+- http://localhost:4000/api/v1/:id/delete
+- ##### To view a question
+- http://localhost:4000/api/v1/:id
+
+- #### This are option routes
+- ##### To add a vote to option
+- http://localhost:4000/api/v1/options/:id/addVote
+- ##### To delete a option
+- http://localhost:4000/api/v1/:id/option/delete
