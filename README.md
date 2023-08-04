@@ -54,7 +54,7 @@ node index.js
 - #### https://polling-system-api-h92m.onrender.com
 
 POSTMAN
- - ### In this app only API as been designed please open the POSTMAN and do below actions to run the API
+ - ### In this Polling System API App only API as been designed please open the POSTMAN and do below actions to run the APIs
  - #### This are question routes
 - ##### To create a question
 - https://polling-system-api-h92m.onrender.com/api/v1/create
