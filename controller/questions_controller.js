@@ -1,11 +1,12 @@
 const Question = require('../models/question');
 const Option = require('../models/option')
 
+//To create a question
 module.exports.createQuestion = async (req, res) => {
     try {
         const question = await Question.create(req.body);
         res.status(201).json({
-            question:question,
+            question: question,
             message: "Question is Created Succesfully"
         });
     } catch (error) {
@@ -14,6 +15,7 @@ module.exports.createQuestion = async (req, res) => {
     }
 };
 
+//To add a option to question
 module.exports.addOptions = async (req, res) => {
     try {
         const { id } = req.params;
@@ -35,27 +37,28 @@ module.exports.addOptions = async (req, res) => {
         question.options.push(option);
         await question.save();
         res.json({
-                option,
-                message:"Option is added successfully"
-            });
+            option,
+            message: "Option is added successfully"
+        });
     } catch (error) {
-        console.log("error in creating options",error);
+        console.log("error in creating options", error);
         return res.status(500).json("Internal erro while creating options")
     }
 }
 
+
+//To delete a question with all its options
 module.exports.deleteQuestion = async (req, res) => {
     try {
         const { id } = req.params;
         const question = await Question.findById(id).populate('options', 'votes');
-
+        
         if (!question) {
             return res.status(500).json({
                 message: "Question not found!"
             });
         }
         const optionsWithVotes = question.options.some(option => option.votes > 0);
-
         if (optionsWithVotes) {
             return res.status(400).json({
                 message: "Question cannot be deleted, its options have votes!"
@@ -63,6 +66,7 @@ module.exports.deleteQuestion = async (req, res) => {
         }
         await Option.deleteMany({ question: id });
         await Question.findByIdAndDelete(id);
+
         res.json({
             message: "Question as been deleted successfully"
         });
@@ -72,19 +76,20 @@ module.exports.deleteQuestion = async (req, res) => {
     }
 }
 
-module.exports.viewQuestion = async(req,res)=>{
+//To view a question with all its options
+module.exports.viewQuestion = async (req, res) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
         const question = await Question.findById(id).populate('options', '-__v');
         if (!question) {
             return res.status(404).json({ message: "Question not found" });
         }
         res.status(200).json({
-            question:question,
-            message:"question as been displayed successfully"
+            question: question,
+            message: "question as been displayed successfully"
         });
     } catch (error) {
-        console.log("error in viewing question",error);
+        console.log("error in viewing question", error);
         return res.status(500).json("Internal error while viewing question")
     }
 }

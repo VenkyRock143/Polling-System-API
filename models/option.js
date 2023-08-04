@@ -1,31 +1,31 @@
 const mongoose = require('mongoose');
 
 const optionsSchema = new mongoose.Schema({
-    id:{
-        type:Number,
-        required:true,
+    id: {
+        type: Number,
+        required: true,
     },
-    question:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'Question'
+    question: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Question'
     },
-    text:{
-        type:String,
-        required:true,
+    text: {
+        type: String,
+        required: true,
     },
-    votes:{
-        type:Number,
+    votes: {
+        type: Number,
     },
-    link_to_vote:{
-        type:String
+    link_to_vote: {
+        type: String
     }
 },
     {
-        timestamps:true
+        timestamps: true
     }
 
 );
 
-const Options = mongoose.model('Options',optionsSchema);
+const Options = mongoose.model('Options', optionsSchema);
 
 module.exports = Options;

@@ -33,7 +33,7 @@ module.exports.deleteOption = async (req, res) => {
 
         if (option.votes > 0) {
             return res.status(400).json({
-                message: "Option cannot be deleted, count of votes > 0!"
+                message: "Option cannot be deleted, Beacause, Votes > 0"
             });
         }
 
