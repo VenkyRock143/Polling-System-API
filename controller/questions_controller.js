@@ -1,5 +1,5 @@
-const Question = require('../model/question');
-const Option=require('../model/option')
+const Question = require('../models/question');
+const Option = require('../models/option')
 
 module.exports.createQuestion = async (req, res) => {
     try {

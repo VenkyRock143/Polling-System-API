@@ -1,5 +1,5 @@
-const Question = require('../model/question');
-const Option = require('../model/option');
+const Question = require('../models/question');
+const Option = require('../models/option');
 
 // Increment the count of votes
 module.exports.addVote = async (req, res) => {
