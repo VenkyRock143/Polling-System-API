@@ -61,14 +61,18 @@ POSTMAN
 - Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the question for title and id
 - ##### To add a option to question
 - https://polling-system-api-h92m.onrender.com/api/v1/:id/options/create
-- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the option for text
+- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the option for text.replace the :id with Question id
 - ##### To delete a question
 - https://polling-system-api-h92m.onrender.com/api/v1/:id/delete
+- replace the :id with Question id
 - ##### To view a question
 - https://polling-system-api-h92m.onrender.com/api/v1/:id
+- replace the :id with Question id
 
 - #### This are option routes
 - ##### To add a vote to option
 - https://polling-system-api-h92m.onrender.com/api/v1/options/:id/addVote
+- replace the :id with option id
 - ##### To delete a option
 - https://polling-system-api-h92m.onrender.com/api/v1/:id/option/delete
+- replace the :id with option id
