@@ -58,7 +58,7 @@ POSTMAN
  - #### This are question routes
 - ##### To create a question
 - https://polling-system-api-h92m.onrender.com/api/v1/create
-- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the question for title and id
+- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the question for title and id with (for example 1,2..etc)
 - ##### To add a option to question
 - https://polling-system-api-h92m.onrender.com/api/v1/:id/options/create
 - Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the option for text.replace the :id with Question id
