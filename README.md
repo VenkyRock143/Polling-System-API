@@ -1,23 +1,10 @@
-# Polling System API
+- # Polling-System-API
 
-## Features
+This repository contains a Polling System API built using Node.js, Express, and MongoDB.
 
-- Created index.js and imported required depedencies like       express,ejs,mongoose,dotnev to secure sensitive files
-- Then Created Required routes,controllers,configs,models and views
+- ## Live Demo
+Access the live application [here](https://polling-system-api-h92m.onrender.com).
 
-## Installation
-
-Polling System API requires [Node.js]to run.
-
-Install the dependencies and start the server.
-
-```sh
-npm i express
-npm i ejs
-npm i mongoose
-npm i dotnenv
-node index.js
-```
 ## Folder Stucture
 ```sh
 ├── config
@@ -49,34 +36,6 @@ node index.js
 └── README.md
 
 ```
-
-### Link
-- #### https://polling-system-api-h92m.onrender.com
-
-POSTMAN
- - ### In this Polling System API App only API as been designed please open the POSTMAN and do below actions to run the APIs
- - #### This are question routes
-- ##### To create a question
-- https://polling-system-api-h92m.onrender.com/api/v1/create
-- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the question for title and id with (for example 1,2..etc)
-- ##### To add a option to question
-- https://polling-system-api-h92m.onrender.com/api/v1/:id/options/create
-- Below the send request form.Select body then select raw then set type as JSON to take JSON as input enter the option for text.replace the :id with Question id
-- ##### To delete a question
-- https://polling-system-api-h92m.onrender.com/api/v1/:id/delete
-- replace the :id with Question id
-- ##### To view a question
-- https://polling-system-api-h92m.onrender.com/api/v1/:id
-- replace the :id with Question id
-
-- #### This are option routes
-- ##### To add a vote to option
-- https://polling-system-api-h92m.onrender.com/api/v1/options/:id/addVote
-
-- # Polling-System-API
-
-This repository contains a Polling System API built using Node.js, Express, and MongoDB.
-
 ## Key Features
 - Create and manage questions and options.
 - Add votes to options.
@@ -104,8 +63,6 @@ This repository contains a Polling System API built using Node.js, Express, and 
 - View a question: `GET /api/v1/:id`
 - Add a vote to an option: `POST /api/v1/options/:id/addVote`
 - Delete an option: `DELETE /api/v1/:id/option/delete`
-
-For more details, visit the [GitHub repository](https://github.com/VenkyRock143/Polling-System-API).
 
 - replace the :id with option id
 - ##### To delete a option
